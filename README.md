@@ -1,7 +1,9 @@
+[![Build Status](https://github.com/arvvoid/plugin.video.hbogoeu/workflows/CI/badge.svg)](https://github.com/arvvoid/plugin.video.hbogoeu/actions)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/arvvoid/plugin.video.hbogoeu)](https://github.com/arvvoid/plugin.video.hbogoeu/blob/master/README.md#install-instructions) 
-[![Python Version](https://img.shields.io/badge/python-2.7%20%7C%203.7-blue)](https://kodi.tv/article/attention-addon-developers-migration-python-3)
-[![Kodi Version](https://img.shields.io/badge/kodi-18%20or%20%2B-blue)](https://kodi.tv/)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9168cc04d56d480ea3987db569d89f44)](https://www.codacy.com/manual/arvvoid/plugin.video.hbogoeu?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=arvvoid/plugin.video.hbogoeu&amp;utm_campaign=Badge_Grade) [![GitHub](https://img.shields.io/github/license/arvvoid/plugin.video.hbogoeu?style=flat)](https://opensource.org/licenses/gpl-2.0.php) [![Contributors](https://img.shields.io/github/contributors/arvvoid/plugin.video.hbogoeu.svg)](https://github.com/arvvoid/plugin.video.hbogoeu/graphs/contributors) [![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-) [![HitCount](http://hits.dwyl.io/arvvoid/pluginvideohbogoeu.svg)](http://hits.dwyl.io/arvvoid/pluginvideohbogoeu)
+[![Kodi Version](https://img.shields.io/badge/kodi-18%20%7C%2019%2B-blue)](https://kodi.tv/)
+[![All Contributors](https://img.shields.io/badge/all_contributors-36-orange.svg?style=flat-square)](#contributors-)
+[![HitCount](http://hits.dwyl.io/arvvoid/pluginvideohbogoeu.svg)](http://hits.dwyl.io/arvvoid/pluginvideohbogoeu)
+[![HowToSupport](https://img.shields.io/badge/How%20to-support%20the%20add--on-orange)](https://github.com/arvvoid/plugin.video.hbogoeu#support-the-add-on)
 
 
 # Disclaimer
@@ -17,73 +19,39 @@ THERE IS NO WARRANTY FOR THE ADD-ON, IT MIGHT NOT WORK AT ALL AND IT CAN BREAK A
 
 If an official app is available for your platform, use it instead of this.
 
-# hGO EU (watch HBO GO in Kodi) (plugin.video.hbogoeu)
+# hGO EU (plugin.video.hbogoeu)
 
 Simple Kodi add-on to access HBO® Go content from Kodi Media Center (http://kodi.tv).
 
-| HBO REGIONS (API-s) / Feature | Europe | Nordic+Spain | USA | Latin America | Asia |
-|-------------------------------|--------|--------------|-----|---------------|------|
-| Basic functions | ✔ | ✔ | ✖ | ✖ | ✖ |
-| Search | ✔ | ✔ | ✖ | ✖ | ✖ |
-| 5.1 Audio | ⛔ | ✔ | ✖ | ✖ | ✖ |
-| Subtitles | ✔ | ✔ | ✖ | ✖ | ✖ |
-| My List | ✔ | ✔ | ✖ | ✖ | ✖ |
-| Add/Remove from/to My List | ✔ | ✔ | ✖ | ✖ | ✖ |
-| Voting | ✔ | ⛔ | ✖ | ✖ | ✖ |
-| Report play  status to HBO | ✔ | ✖ | ✖ | ✖ | ✖ |
-
-Legend: ✔ - feature availible for the region and working in the add-on, ✖ - feature availible for the region but not implemented or broken in the add-on, ⛔ feature not availible for the region
-
-This add-on support 18 countries atm: 
-*  __Bosnia and Herzegovina__ *[EU]*
-*  __Bulgaria__ *[EU]*
-*  __Croatia__ *[EU]*
-*  __Czech Republic__ *[EU]*
-*  __Denmark__ *[Nordic+Spain]*
-*  __Finland__ *[Nordic+Spain]*
-*  __Hungary__ *[EU]*
-*  __Macedonia__ *[EU]*
-*  __Montenegro__ *[EU]*
-*  __Norway__ *[Nordic+Spain]*
-*  __Polonia__ *[EU]*
-*  __Portugal__ *[EU]*
-*  __Romania__ *[EU]*
-*  __Serbia__ *[EU]*
-*  __Slovakia__ *[EU]*
-*  __Slovenija__ *[EU]*
-*  __Spain__ *[Nordic+Spain]*
-*  __Sweden__ *[Nordic+Spain]*
-
-PLEASE IF YOU ARE REPORTING AN ISSUE PROVIDE Kodi Debug Logs: https://kodi.wiki/view/Log_file/Easy . Without a full log is difficult or impossible to guess what's going on.
+This add-on support 18 countries at the moment: Bosnia and Herzegovina, Bulgaria, Croatia, Czech Republic, Denmark, Finland, Hungary, Macedonia, Montenegro, Norway, Polonia, Portugal, Romania, Serbia, Slovakia, Slovenija, Spain, Sweden. To see the full list of supported regions/countries/operators go to the [REGIONAL SUPPORT](https://github.com/arvvoid/plugin.video.hbogoeu/wiki/Regional-support) wiki page.
 
 ## Install instructions
 
-* Works on Kodi 18 (Leia) or later
+* Works on Kodi 18 (Leia), Kodi 19 (Matrix) or later
 * A valid HBO® Go account is needed for the add-on to work
-* Simply install from the Kodi add-on repository
+* Simply install from the Kodi add-on repository (search hgo or hbo to find quickly or browse under the video category)
 * Follow the setup wizard at first add-on run
 * The add-on should install the [inputstreamhelper](https://github.com/emilsvennesson/script.module.inputstreamhelper) add-on which will help with [inputstream.adaptive](https://github.com/peak3d/inputstream.adaptive) and DRM setup if needed
 * The add-on will auto-update from repository as soon as a stable release is available
-* *MIGHT BE NECESSARY: On OSMC/Raspbian/Debian you might have to install some dependency manually from shell, but first try to run the add-on, if you get a message informing you that pycryptodomex is missing perform this steps (or consult specific pycryptodomex install instructions for your distribution/platform):*
-```
-sudo apt update
-sudo apt install build-essential python-setuptools python-pip libnss3 libnspr4
-sudo pip install wheel pycryptodomex
-```
 * *OPTIONAL: Configure additional preferences in the add-on config*
 
-## Manual Download/Install
+## Support
 
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/arvvoid/plugin.video.hbogoeu)](https://github.com/arvvoid/plugin.video.hbogoeu/releases/latest)
-[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/arvvoid/plugin.video.hbogoeu?color=orange&include_prereleases&label=last%20test%20release)](https://github.com/arvvoid/plugin.video.hbogoeu/releases)
+If you need help you can consult this resources:
+
+[Kodi Forum thread](https://forum.kodi.tv/showthread.php?tid=339798) |
+[Project wiki](https://github.com/arvvoid/plugin.video.hbogoeu/wiki) | 
+[FAQ](https://github.com/arvvoid/plugin.video.hbogoeu/wiki/FAQ) | 
+[Troubleshoot](https://github.com/arvvoid/plugin.video.hbogoeu/wiki/Troubleshoot)
+
+If you are reporting an issue or asking for support you can go to the [ISSUES](https://github.com/arvvoid/plugin.video.hbogoeu/issues) section.
+
+Please use the provided templates and provide all asked information, including [full kodi debug logs](https://kodi.wiki/view/Log_file/Easy) otherwise its hard or impossible to help or identify and fix the problem.
+
 
 ## Change Log
 
 [CHANGE LOG](https://github.com/arvvoid/plugin.video.hbogoeu/blob/master/changelog.md)
-
-## Help
-
-Join the discusion on the [Kodi Forum](https://forum.kodi.tv/showthread.php?tid=339798), if you have a bug or issue to report open a new [ISSUE](https://github.com/arvvoid/plugin.video.hbogoeu/issues)
 
 ## Contributors ✨
 
@@ -125,12 +93,21 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/all-contributors/all-contributors-bot"><img src="https://avatars3.githubusercontent.com/u/46843839?v=4" width="100px;" alt=""/><br /><sub><b>allcontributors[bot]</b></sub></a><br /><a href="https://github.com/arvvoid/plugin.video.hbogoeu/commits?author=allcontributors" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/mata007"><img src="https://avatars1.githubusercontent.com/u/22648433?v=4" width="100px;" alt=""/><br /><sub><b>mata007</b></sub></a><br /><a href="https://github.com/arvvoid/plugin.video.hbogoeu/issues?q=author%3Amata007" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/ferdabasek"><img src="https://avatars2.githubusercontent.com/u/58233539?v=4" width="100px;" alt=""/><br /><sub><b>ferdabasek</b></sub></a><br /><a href="#ideas-ferdabasek" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/arvvoid/plugin.video.hbogoeu/commits?author=ferdabasek" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/durip"><img src="https://avatars3.githubusercontent.com/u/13102223?v=4" width="100px;" alt=""/><br /><sub><b>durip</b></sub></a><br /><a href="#userTesting-durip" title="User Testing">📓</a></td>
+    <td align="center"><a href="https://github.com/durip"><img src="https://avatars3.githubusercontent.com/u/13102223?v=4" width="100px;" alt=""/><br /><sub><b>durip</b></sub></a><br /><a href="#userTesting-durip" title="User Testing">📓</a> <a href="#translation-durip" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/splichy"><img src="https://avatars3.githubusercontent.com/u/16658908?v=4" width="100px;" alt=""/><br /><sub><b>splichy</b></sub></a><br /><a href="#ideas-splichy" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/arvvoid/plugin.video.hbogoeu/commits?author=splichy" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/boblo1"><img src="https://avatars1.githubusercontent.com/u/58788554?v=4" width="100px;" alt=""/><br /><sub><b>boblo1</b></sub></a><br /><a href="#translation-boblo1" title="Translation">🌍</a></td>
   </tr>
   <tr>
     <td align="center"><a href="http://marianfocsa.info"><img src="https://avatars3.githubusercontent.com/u/17079638?v=4" width="100px;" alt=""/><br /><sub><b>Marian FX</b></sub></a><br /><a href="https://github.com/arvvoid/plugin.video.hbogoeu/commits?author=marianfx" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/artemplaksiy"><img src="https://avatars0.githubusercontent.com/u/34888588?v=4" width="100px;" alt=""/><br /><sub><b>artemplaksiy</b></sub></a><br /><a href="https://github.com/arvvoid/plugin.video.hbogoeu/issues?q=author%3Aartemplaksiy" title="Bug reports">🐛</a> <a href="#ideas-artemplaksiy" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://dag.wiee.rs/blog/"><img src="https://avatars0.githubusercontent.com/u/388198?v=4" width="100px;" alt=""/><br /><sub><b>Dag Wieers</b></sub></a><br /><a href="https://github.com/arvvoid/plugin.video.hbogoeu/issues?q=author%3Adagwieers" title="Bug reports">🐛</a> <a href="#ideas-dagwieers" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/Buraddo23"><img src="https://avatars0.githubusercontent.com/u/28982082?v=4" width="100px;" alt=""/><br /><sub><b>vladsing</b></sub></a><br /><a href="https://github.com/arvvoid/plugin.video.hbogoeu/issues?q=author%3ABuraddo23" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/gbelovai"><img src="https://avatars2.githubusercontent.com/u/63640826?v=4" width="100px;" alt=""/><br /><sub><b>gbelovai</b></sub></a><br /><a href="https://github.com/arvvoid/plugin.video.hbogoeu/issues?q=author%3Agbelovai" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/petakpa1"><img src="https://avatars1.githubusercontent.com/u/47955298?v=4" width="100px;" alt=""/><br /><sub><b>petakpa1</b></sub></a><br /><a href="https://github.com/arvvoid/plugin.video.hbogoeu/issues?q=author%3Apetakpa1" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/rocknrollnor"><img src="https://avatars2.githubusercontent.com/u/64284359?v=4" width="100px;" alt=""/><br /><sub><b>rocknrollnor</b></sub></a><br /><a href="https://github.com/arvvoid/plugin.video.hbogoeu/issues?q=author%3Arocknrollnor" title="Bug reports">🐛</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://try.to.find.it"><img src="https://avatars3.githubusercontent.com/u/5789283?v=4" width="100px;" alt=""/><br /><sub><b>Sopor</b></sub></a><br /><a href="#translation-Sopor" title="Translation">🌍</a></td>
   </tr>
 </table>
 
@@ -139,3 +116,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## Support the add-on
+
+You can help with the development and support the add-on in many different ways 😊
+<br>Read more on the Wiki page: [How to support the add-on](https://github.com/arvvoid/plugin.video.hbogoeu/wiki/How-to-support-the-add-on)

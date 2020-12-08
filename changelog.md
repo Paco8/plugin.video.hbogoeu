@@ -1,3 +1,96 @@
+v.2.6.1
+- Recent Kodi 19 API compatibility changes
+- Swedish translation by @Sopor
+- Minor changes
+
+v.2.6.0
+- Updated and improved subtitle support for Spain/Nordic region (major ttml2srt update)
+
+v.2.5.10
+- Improve elapsed time function (prevent failed report play status to Hbo in some cases)
+- Alternative method to retrieve season listing (slower) in case standard one fail for some reason (happen rarely, usually its just temporary error, but the add-on can deal with it now without bothering the user)
+- Translations update
+
+v.2.5.8
+- Translations update
+
+v.2.5.7
+- Option to disable device-id based credential encryption (for troubleshooting, or if problems, expert option, warning for users if disabled)
+
+v.2.5.6
+- Fix encoding problems in profile paths with unicode characters (ex. Windows username with special characters)
+- Clean-up and revision of encoding problematic points (to prevent surprises in the future)
+
+v.2.5.5
+- Fix setup for operators with direct (affiliate) login. Fix setup and login for these operators: Bulgaria: Telekabel, NET1; Czech Republic: Vodafone Česká republika, Skylink CZ from 1.4.2020, UPC TV (from 1.4.2020); Montenegro: MTEL; Romania: Telekom Romania; Serbia: Test RS 1, Supernova; Slovakia: Skylink SK from 1.4.2020, Portugal: Vodafone TV, Vodafone Móvel
+
+v.2.5.4
+- Cache subtitles for the EU region if inject subtitles option is enabled (default), workaround to avoid the sometimes disappearing internal subtitles defined in the manifest
+
+v.2.5.3
+- SPDX License update
+- Support for non  ascii username/password (experimental)
+
+v.2.5.0
+- Fix playing the same content twice with caching enabled for Spain/Nordic region
+- Minor code/style fixes
+- Update translations
+- Remove pycryptodomex dependency ,use a pure python aes implementation (pyaes)
+  [THIS VERSION WILL ASK TO RE-ENTER CREDENTIALS]
+  [THIS IMPROVE OUT OF THE BOX COMPATIBILITY WITH MORE DEVICES, NO NOTICABLE PERFORMANCE DIFFERENCE FOR THE USE]
+  [pycryptodomex had to be installed from command line on many Linux, macOS]
+  
+v.2.4.0
+- New enhanced Kids category (EU handler)
+- Legacy Kids category removed (removed from API, EU handler)
+- Enhanced search too include Kids shows and movies (EU handler)
+- Kids only mode (activate in settings to display only Kids category and nothing else)
+  [mainly intended for use with Kodi profiles, you have to prevent changing settings with the profile where you want too enforce this]
+- Search result limits fixes
+- Language files fixes
+- Minor fixes
+
+v.2.3.10
+- Fixed encoding error on opening search category
+
+v.2.3.9
+- Update to hr_hr translation (by @arvvoid)
+- Update to hu_hu translation (by @Ajnasz)
+- Update to es_es translation (by @boblo1)
+- Update to ro_ro translation (by @tmihai20)
+- Update to fi_fi translation (by @jumakki)
+- Minor fixes
+
+v.2.3.7
+- Update to hr_hr translation (by @arvvoid)
+- Update to hu_hu translation (by @Ajnasz)
+- Update to es_es translation (by @boblo1)
+- Update to ro_ro translation (by @tmihai20)
+- Update to fi_fi translation (by @jumakki)
+
+v.2.3.6
+- Update to es_es translation (by @boblo1)
+
+v.2.3.5
+- If not currently available, show available from date and time in the plot
+- BUGFIX: Correct available from date and time
+- Detect not available content before attempt play (show dialog when the content will be available)
+- On playback start long inactivity error, silently re-login and retry playback automatically
+
+v.2.3.0
+- Request caching                           
+- Optimize re-login on unauthorized
+- Local SQlight database
+- Search history
+- external add-ons can search now (ability to create TMDB Helper Player)
+- improved search
+
+v.2.2.0
+- duoble new line fix in ttml2srt on some subtitles
+- Translations update
+- Set content type for listings based on the media type of the majority of the items in the list
+- Option to force generic "video" media type for listings
+
 v.2.1.5
 - fix Telekom Romania (My Account) login
 - new logo

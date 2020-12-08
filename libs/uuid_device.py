@@ -1,17 +1,25 @@
 # -*- coding: utf-8 -*-
 # based on https://github.com/CastagnaIT/plugin.video.netflix/blob/master/resources/lib/common/uuid_device.py
+#
+# Copyright (C) 2017 Sebastian Golasch (plugin.video.netflix)
+# Copyright (C) 2019 Stefano Gottardo - @CastagnaIT (original implementation module)
+# Get the UUID of the device
+# SPDX-License-Identifier: MIT
+#    -----------------------------
+# Some minor modifications have been made to the code to adapt to this project
+# see original source file in link above.
 
 from __future__ import absolute_import, division, unicode_literals
 
 import sys
 
-from kodi_six import xbmc, xbmcaddon
+from kodi_six import xbmc, xbmcaddon  # type: ignore
 
 __CRYPT_KEY__ = None
 
 
 def debug(msg):
-    xbmc.log("[" + str(xbmcaddon.Addon().getAddonInfo('id')) + "]" + msg, xbmc.LOGDEBUG)
+    xbmc.log("[" + xbmcaddon.Addon().getAddonInfo('id') + "] " + msg, xbmc.LOGDEBUG)
 
 
 def get_system_platform():
@@ -76,9 +84,9 @@ def _get_windows_uuid():
     uuid_value = None
     try:
         try:  # Python 2
-            import _winreg as winreg
+            import _winreg as winreg  # type: ignore
         except ImportError:  # Python 3
-            import winreg as winreg
+            import winreg as winreg  # type: ignore
         registry = winreg.HKEY_LOCAL_MACHINE
         address = 'SOFTWARE\\Microsoft\\Cryptography'
         keyargs = winreg.KEY_READ | winreg.KEY_WOW64_64KEY

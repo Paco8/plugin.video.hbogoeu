@@ -1,0 +1,6 @@
+requests
+pyaes
+Kodistubs
+flake8
+mypy
+#kodi-addon-checker

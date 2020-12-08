@@ -1,12 +1,11 @@
 # encoding: utf-8
 # util class for Hbo Go Kodi add-on
-# Copyright (C) 2019 ArvVoid (https://github.com/arvvoid)
-# Relesed under GPL version 2
-#########################################################
+# Copyright (C) 2019-2020 ArvVoid (https://github.com/arvvoid)
+# SPDX-License-Identifier: GPL-2.0-or-later
 
 from __future__ import absolute_import, division
 
-from kodi_six import xbmcplugin
+from kodi_six import xbmcplugin  # type: ignore
 
 
 class KodiUtil(object):
