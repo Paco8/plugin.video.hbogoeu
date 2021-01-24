@@ -1174,9 +1174,11 @@ class HbogoHandler_eu(HbogoHandler):
             list_item.setProperty('inputstream.adaptive.license_key', license_key)
 
             #  inject subtitles for the EU region, workaround to avoid the sometimes disappearing internal subtitles defined in the manifest
-            folder = KodiUtil.translatePath(self.addon.getAddonInfo('profile'))
-            folder = folder + 'subs' + os.sep + content_id + os.sep
             if self.addon.getSetting('forcesubs') == 'true':
+                folder = KodiUtil.translatePath(self.addon.getAddonInfo('profile'))
+                folder = folder + 'subs'
+                self.clean_sub_cache(folder)
+                folder = folder + os.sep + content_id + os.sep
                 #  if inject subtitles is enable cache direct subtitle links if available and set subtitles from cache
                 self.log("Cache subtitles enabled, downloading and converting subtitles in: " + folder)
                 if not os.path.exists(os.path.dirname(folder)):
@@ -1529,7 +1531,7 @@ class HbogoHandler_eu(HbogoHandler):
             MediaType = '1'
         elif (MediaType == 'episode'):
             MediaType = '3'
-        resume_payload = '{"CustomerId":"' + self.GOcustomerId + '","CountryCode":"' + self.LANGUAGE_CODE + '","ExternalId":"' + ExternalId + \
+        resume_payload = '{"CustomerId":"' + self.GOcustomerId + '","CountryCode":"' + self.COUNTRY_CODE + '","ExternalId":"' + ExternalId + \
                          '","ContentType":' + MediaType + ',"Position":' + Current_Time + ',"ElapsedPercentage":' + Percent_Elapsed + \
                          ',"LoginSessionId":"' + str(self.sessionId) + '"}'
         history_headers = self.loggedin_headers

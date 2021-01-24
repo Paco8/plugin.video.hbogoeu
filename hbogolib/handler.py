@@ -553,6 +553,18 @@ class HbogoHandler(object):
             xbmcplugin.addDirectoryItem(handle=self.handle, url=tmp_url, listitem=liz, isFolder=True)
         KodiUtil.endDir(self.handle, None, True)
 
+    def clean_sub_cache(self, silent=True):
+        try:
+            import shutil
+            subs_folder = KodiUtil.translatePath(self.addon.getAddonInfo('profile'))
+            subs_folder = subs_folder + 'subs'
+            shutil.rmtree(subs_folder, ignore_errors=True)
+            if not silent:
+                icon = self.get_resource("icon.png")
+                xbmcgui.Dialog().notification(self.language(30814), self.LB_INFO, icon)
+        except Exception:
+            self.log("Clean subtitle cache error: " + traceback.format_exc())
+
     # IMPLEMENT THESE IN SPECIFIC REGIONAL HANDLER
 
     def setup(self, country, forceeng=False):
